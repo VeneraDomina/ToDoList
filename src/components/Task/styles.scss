@@ -1,0 +1,63 @@
+.task {
+  margin: 0 15px;
+  display: flex;
+  position: relative;
+  width: 400px;
+  height: 30px;
+  font-family: 'Crimson Text', serif;
+  font-size: 14px;
+  align-items: center;
+
+
+  input[type='text'] {
+    outline: none;
+    border: 0;
+    border-bottom: 1px solid black;
+    margin-left: 35px;
+    width: 350px;
+    font-family: 'Crimson Text', serif;
+    font-style: italic;
+    font-weight: 500;
+  }
+
+
+  input[type='submit']{
+    position: absolute;
+    right: 10px;
+    width: 30px;
+    height: 20px;
+    border: 0;
+    outline: 0;
+    background-color: #FFFFFF;
+    font-style: italic;
+    color: #92d4d2;
+    font-size: 12px;
+    letter-spacing: 1px;
+    cursor: pointer;
+
+    &:hover {
+      color: #000;
+    }
+  }
+
+
+  .select {
+    content: '';
+    position: absolute;
+    top: 5px;
+    left: 10px;
+    width: 17.5px;
+    height: 17px;
+    background-image: url('../../theme/assets/select.png');
+    background-repeat: no-repeat;
+    background-position: -17px 0;
+    cursor: pointer;
+  }
+
+  label {
+    opacity: 0.3;
+    position: absolute;
+    top: 0;
+    left: 20px;
+  }
+}

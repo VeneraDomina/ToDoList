@@ -1,0 +1,32 @@
+.folder {
+  position: relative;
+  width: 340px;
+  height: 30px;
+  font-family: 'Crimson Text', serif;
+  font-size: 14px;
+
+  input[type='text'] {
+    outline: none;
+    border: 0;
+    background-color: #92d4d2;
+    margin-left: 35px;
+    width: 200px;
+    font-family: 'Crimson Text', serif;
+    font-weight: 500;
+    color: #000;
+  }
+
+  input[type='submit']{
+    position: absolute;
+    right: 20px;
+    width: 30px;
+    height: 20px;
+    border: 0;
+    outline: 0;
+    font-family: 'Crimson Text', serif;
+    background-color: #92d4d2;
+    font-size: 12px;
+    letter-spacing: 1px;
+    cursor: pointer;
+  }
+}
