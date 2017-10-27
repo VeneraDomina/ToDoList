@@ -6,49 +6,79 @@ import Folder from '../Folder';
 export default class FolderList extends Component {
     constructor () {
         super();
-        this.createFolder =:: this._createFolder;
-        this.getFolders =:: this._getFolders;
 
+        this.createFolder = ::this._createFolder;
+        this.getFolders = ::this._getFolders;
+        this.setFolders = ::this._setFolders;
+        this.deleteAllFolders = ::this._deleteAllFolders;
+        this.deleteFolder =:: this._deleteFolder;
     }
+
     state = {
         folders: []
     };
 
     componentWillMount () {
-        this.getFolders();
+        this.setFolders();
     }
-
     _createFolder (newFolder) {
-        localStorage.setItem('folders', JSON.stringify({ folder: newFolder.folder, folderID: newFolder._id }));
+        localStorage.setItem(
+            'folders',
+            JSON.stringify([
+                ...this.getFolders(),
+                {
+                    folder: newFolder.folder,
+                    _id:    newFolder._id
+                }
+            ])
+        );
+
         this.setState(({ folders }) => ({
             folders: [...folders, newFolder]
         }));
-        console.log(newFolder._id);
     }
-    _getFolders () {
-        const data = JSON.parse(localStorage.getItem('folders'));
-
+    _setFolders () {
         this.setState(({ folders }) => ({
-            folders: [...folders, data]
+            folders: [...folders, ...this.getFolders()]
         }));
     }
+    _getFolders () {
+        return JSON.parse(localStorage.getItem('folders')) || [];
+    }
+    _deleteFolder (_id) {
+        localStorage.setItem(
+            'folders',
+            JSON.stringify(this.getFolders().filter((folder) => folder._id !== _id))
+        );
 
+        this.setState(() => ({
+            folders: this.getFolders()
+        }));
+    }
+    _deleteAllFolders () {
+        localStorage.clear();
+        this.setState(() => ({
+            folders: this.getFolders()
+        }));
+    }
     render () {
         const { folders } = this.state;
-        const folderList = folders.map(
-            ({ _id, folder }) => (
-                <li key = { _id }>
-                    <Folder
-                        _id = { _id }
-                        folder = { folder }
-                    />
-                </li>
-            ));
+
+        const folderList = folders.map(({ _id, folder }) => (
+            <li key = { _id }>
+                <Folder
+                    _id = { _id }
+                    deleteFolder = { this.deleteFolder }
+                    folder = { folder }
+                />
+            </li>
+        ));
 
         return (
-            <section className = { Styles.boxTaskList } >
-                <ol className = { Styles.folderMenu }>{ folderList }</ol>
+            <section className = { Styles.boxTaskList }>
+                <ol className = { Styles.folderMenu }>{folderList}</ol>
                 <FolderMaker createFolder = { this.createFolder } />
+                <button onClick = { this.deleteAllFolders }>clear</button>
             </section>
         );
     }

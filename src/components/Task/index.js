@@ -6,24 +6,10 @@ export default class Task extends Component {
     static propTypes = {
         task: PropTypes.string.isRequired
     };
-    constructor () {
-        super();
-        this.redactTask =:: this._redactTask;
-    }
+
     state = {
         task: ''
     };
-
-    _redactTask (event) {
-        const task = event.target.value;
-
-        this.props.redactTask(this.props._id, this.props.task);
-        this.setState(() => ({
-            task
-        }));
-        console.log(task);
-    }
-
 
     render () {
         const { task } = this.props;
@@ -34,7 +20,6 @@ export default class Task extends Component {
                 <input
                     type = 'text'
                     value = { task }
-                    onChange = { this.redactTask }
                 />
                 <input type = 'submit' value = 'Del' />
             </section>

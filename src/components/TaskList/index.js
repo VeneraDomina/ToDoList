@@ -7,7 +7,6 @@ export default class TaskList extends Component {
     constructor () {
         super();
         this.createTask =:: this._createTask;
-        this.redactTask =:: this._redactTask;
     }
     state = {
         tasks: []
@@ -19,25 +18,22 @@ export default class TaskList extends Component {
             tasks: [...tasks, task]
         }));
     }
-    _redactTask (_id, task) {
-
-    }
 
     render () {
         const { tasks } = this.state;
+        const header = 'Let\'s do this!';
         const taskList = tasks.map(
             ({ _id, task }) => (
                 <Task
                     _id = { _id }
                     key = { _id }
                     task = { task }
-                    redactTask = { this.redactTask }
                 />
             ));
 
         return (
             <section className = { Styles.taskList }>
-                <h1>Let's do this!</h1>
+                <h1>{ header }</h1>
                 { taskList }
                 <TaskMaker createTask = { this.createTask } />
             </section>

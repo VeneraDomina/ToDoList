@@ -4,13 +4,21 @@ import PropTypes from 'prop-types';
 
 export default class Folder extends Component {
     static propTypes = {
-        folder: PropTypes.string.isRequired
+        _id:          PropTypes.string.isRequired,
+        deleteFolder: PropTypes.func.isRequired,
+        folder:       PropTypes.string.isRequired
     };
-
+    constructor () {
+        super();
+        this.deleteFolder =:: this._deleteFolder;
+    }
     state = {
-        folder: ''
+        isSelected: true,
+        isNew:      true
     };
-
+    _deleteFolder () {
+        this.props.deleteFolder(this.props._id);
+    }
     render () {
         const { folder } = this.props;
 
@@ -22,7 +30,7 @@ export default class Folder extends Component {
                         value = { folder }
                     />
                 </a>
-                <input type = 'submit' value = 'Del' />
+                <span onClick = { this.deleteFolder }>Del</span>
             </section>
         );
     }
