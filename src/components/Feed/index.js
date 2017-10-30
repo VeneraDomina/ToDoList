@@ -20,13 +20,17 @@ export default class Feed extends Component {
         folders:  [],
         folderID: ''
     };
-    componentWillMount () {
+
+    componentDidMount () {
         this.setFolders();
-        this.state.folders.length
-            ? this.setState(() => ({
-                folderID: this.state.folders[0]._id
-            }))
-            : null;
+
+        setImmediate(() => {
+            this.state.folders.length
+                ? this.setState(() => ({
+                    folderID: this.state.folders[0]._id
+                }))
+                : null;
+        });
     }
     _createFolder (newFolder) {
         localStorage.setItem(
@@ -71,7 +75,6 @@ export default class Feed extends Component {
         }));
     }
     _createTask (newTask) {
-        console.log('Create Task: ', this.state.folders, this.state.folderID);
         const { folders, folderID } = this.state;
         const folderWithTask = folders.map((folder) => {
             if (folder._id === folderID) {
@@ -85,7 +88,7 @@ export default class Feed extends Component {
         localStorage.setItem(
             'folders',
             JSON.stringify(
-                folders )
+                folders)
         );
     }
     _selectedFolder (_id) {
@@ -107,8 +110,6 @@ export default class Feed extends Component {
             </li>
         ));
 
-        console.log('State folders', this.state.folders);
-
         return (
             <section className = { Styles.feed }>
                 <FolderList
@@ -118,8 +119,6 @@ export default class Feed extends Component {
                 />
                 <TaskList
                     createTask = { this.createTask }
-                    folderID = { folderID }
-                    folders = { folders }
                 />
             </section>
         );

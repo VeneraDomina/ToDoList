@@ -6,8 +6,8 @@ import PropTypes from 'prop-types';
 
 export default class TaskList extends Component {
     static propTypes = {
-        createTask: PropTypes.func.isRequired
-    }
+        createTask: PropTypes.func.isRequired,
+    };
     constructor () {
         super();
         this.createTask =:: this._createTask;
