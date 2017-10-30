@@ -15,6 +15,7 @@ export default class Feed extends Component {
         this.deleteFolder =:: this._deleteFolder;
         this.createTask =:: this._createTask;
         this.selectedFolder =:: this._selectedFolder;
+        this.deleteTask =:: this._deleteTask;
     }
     state = {
         folders:  [],
@@ -80,16 +81,28 @@ export default class Feed extends Component {
             if (folder._id === folderID) {
                 folder.taskList = [...folder.taskList, newTask];
             }
+
+            return folder;
         });
 
         this.setState(() => ({
             folders: folderWithTask
         }));
-        localStorage.setItem(
-            'folders',
-            JSON.stringify(
-                folders)
-        );
+        localStorage.setItem('folders', JSON.stringify(folders));
+    }
+    _deleteTask (_id) {
+        const { folders, folderID } = this.state;
+        const foldersChangeTask = folders.map((folder) => {
+            if (folder._id === folderID) {
+                folder.taskList.filter((task) => task._id !== _id);
+            }
+
+            return folder;
+        });
+
+        this.setState(() => ({
+            folders: foldersChangeTask
+        }));
     }
     _selectedFolder (_id) {
         this.setState(() => ({
@@ -97,9 +110,9 @@ export default class Feed extends Component {
         }));
     }
     render () {
+        let taskArray = [];
         const { folders, folderID } = this.state;
         const folderList = folders.map((folder) => (
-            console.log('Map folders in Feed', folder),
             <li key = { folder._id }>
                 <Folder
                     _id = { folder._id }
@@ -110,6 +123,12 @@ export default class Feed extends Component {
             </li>
         ));
 
+        folders.filter((folder) => {
+            if (folder._id === folderID) {
+                taskArray = folder.taskList;
+            }
+        });
+
         return (
             <section className = { Styles.feed }>
                 <FolderList
@@ -119,6 +138,8 @@ export default class Feed extends Component {
                 />
                 <TaskList
                     createTask = { this.createTask }
+                    deleteTask = { this.deleteTask }
+                    tasks = { taskArray }
                 />
             </section>
         );

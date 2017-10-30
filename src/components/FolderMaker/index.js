@@ -34,8 +34,9 @@ export default class FolderMaker extends Component {
             return;
         }
         this.props.createFolder({
-            _id:    getUniqueID(15),
-            folder: folderValue
+            _id:      getUniqueID(15),
+            folder:   folderValue,
+            taskList: []
         });
 
         this.setState(() => ({
