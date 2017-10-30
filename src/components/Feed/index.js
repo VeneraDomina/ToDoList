@@ -71,20 +71,21 @@ export default class Feed extends Component {
         }));
     }
     _createTask (newTask) {
+        console.log('Create Task: ', this.state.folders, this.state.folderID);
         const { folders, folderID } = this.state;
         const folderWithTask = folders.map((folder) => {
-            if (folder._id == folderID) {
+            if (folder._id === folderID) {
                 folder.taskList = [...folder.taskList, newTask];
             }
         });
+
         this.setState(() => ({
-            folders:  folderWithTask
+            folders: folderWithTask
         }));
         localStorage.setItem(
             'folders',
-            JSON.stringify([
-                ...this.getFolders()
-            ])
+            JSON.stringify(
+                folders )
         );
     }
     _selectedFolder (_id) {
