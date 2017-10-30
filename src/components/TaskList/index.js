@@ -2,21 +2,26 @@ import React, { Component } from 'react';
 import TaskMaker from '../TaskMaker';
 import Styles from './styles.scss';
 import Task from '../Task';
+import PropTypes from 'prop-types';
 
 export default class TaskList extends Component {
+    static propTypes = {
+        createTask: PropTypes.func.isRequired
+    }
     constructor () {
         super();
         this.createTask =:: this._createTask;
+        this.deleteTask =:: this._deleteTask;
     }
     state = {
         tasks: []
     };
 
-    _createTask (task) {
+    _createTask (newTask) {
+        this.props.createTask(newTask);
+    }
+    _deleteTask (_id) {
 
-        this.setState(({ tasks }) => ({
-            tasks: [...tasks, task]
-        }));
     }
 
     render () {
@@ -26,6 +31,7 @@ export default class TaskList extends Component {
             ({ _id, task }) => (
                 <Task
                     _id = { _id }
+                    deleteTask = { this.deleteTask }
                     key = { _id }
                     task = { task }
                 />

@@ -4,12 +4,19 @@ import PropTypes from 'prop-types';
 
 export default class Task extends Component {
     static propTypes = {
-        task: PropTypes.string.isRequired
+        _id:        PropTypes.string.isRequired,
+        deleteTask: PropTypes.func.isRequired,
+        task:       PropTypes.string.isRequired
     };
 
-    state = {
-        task: ''
-    };
+    constructor () {
+        super();
+        this.deleteTask =:: this._deleteTask;
+    }
+
+    _deleteTask () {
+        this.props.deleteTask(this.props._id);
+    }
 
     render () {
         const { task } = this.props;
@@ -21,7 +28,7 @@ export default class Task extends Component {
                     type = 'text'
                     value = { task }
                 />
-                <input type = 'submit' value = 'Del' />
+                <span onClick = { this.deleteTask }>Del</span>
             </section>
         );
     }
