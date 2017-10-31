@@ -23,7 +23,7 @@ export default class Task extends Component {
 
         return (
             <section className = { Styles.task }>
-                <span className = { Styles.select } />
+                <div className = { Styles.select } />
                 <input
                     type = 'text'
                     value = { task }

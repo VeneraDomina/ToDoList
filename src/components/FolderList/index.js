@@ -5,16 +5,20 @@ import PropTypes from 'prop-types';
 
 export default class FolderList extends Component {
     static propTypes = {
-        createFolder: PropTypes.func.isRequired,
-        folderList:   PropTypes.array.isRequired
+        createFolder:     PropTypes.func.isRequired,
+        deleteAllFolders: PropTypes.func.isRequired,
+        folderList:       PropTypes.array.isRequired
     };
     constructor () {
         super();
-
+        this.deleteAllFolders =:: this._deleteAllFolders;
         this.createFolder = ::this._createFolder;
     }
     _createFolder (newFolder) {
         this.props.createFolder(newFolder);
+    }
+    _deleteAllFolders () {
+        this.props.deleteAllFolders();
     }
 
     render () {

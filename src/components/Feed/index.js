@@ -92,16 +92,12 @@ export default class Feed extends Component {
     }
     _deleteTask (_id) {
         const { folders, folderID } = this.state;
+        const folderToChange = folders.filter((folder) => folder._id === folderID);
+        const taskList = folderToChange[0].taskList.filter((task) => task._id !== _id);
         const foldersDelTask = folders.map((folder) => {
-            console.log(folder.taskList, _id);
             if (folder._id === folderID) {
-                folder.taskList.filter((task) => {
-                    console.log(task._id !== _id);
-
-                    return task._id !== _id;
-                });
+                folder.taskList = taskList;
             }
-            console.log(folder.taskList);
 
             return folder;
         });
@@ -109,6 +105,7 @@ export default class Feed extends Component {
         this.setState(() => ({
             folders: foldersDelTask
         }));
+        localStorage.setItem('folders', JSON.stringify(folders));
     }
     _selectedFolder (_id) {
         this.setState(() => ({
@@ -139,6 +136,7 @@ export default class Feed extends Component {
             <section className = { Styles.feed }>
                 <FolderList
                     createFolder = { this.createFolder }
+                    deleteAllFolders = { this.deleteAllFolders }
                     deleteFolder = { this.deleteFolder }
                     folderList = { folderList }
                 />
