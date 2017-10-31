@@ -6,7 +6,6 @@ import PropTypes from 'prop-types';
 
 export default class TaskList extends Component {
     static propTypes = {
-        _id:        PropTypes.string.isRequired,
         createTask: PropTypes.func.isRequired,
         deleteTask: PropTypes.func.isRequired,
         tasks:      PropTypes.array.isRequired

@@ -77,7 +77,7 @@ export default class Feed extends Component {
     }
     _createTask (newTask) {
         const { folders, folderID } = this.state;
-        const folderWithTask = folders.map((folder) => {
+        const foldersAddTask = folders.map((folder) => {
             if (folder._id === folderID) {
                 folder.taskList = [...folder.taskList, newTask];
             }
@@ -86,22 +86,28 @@ export default class Feed extends Component {
         });
 
         this.setState(() => ({
-            folders: folderWithTask
+            folders: foldersAddTask
         }));
         localStorage.setItem('folders', JSON.stringify(folders));
     }
     _deleteTask (_id) {
         const { folders, folderID } = this.state;
-        const foldersChangeTask = folders.map((folder) => {
+        const foldersDelTask = folders.map((folder) => {
+            console.log(folder.taskList, _id);
             if (folder._id === folderID) {
-                folder.taskList.filter((task) => task._id !== _id);
+                folder.taskList.filter((task) => {
+                    console.log(task._id !== _id);
+
+                    return task._id !== _id;
+                });
             }
+            console.log(folder.taskList);
 
             return folder;
         });
 
         this.setState(() => ({
-            folders: foldersChangeTask
+            folders: foldersDelTask
         }));
     }
     _selectedFolder (_id) {
