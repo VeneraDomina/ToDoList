@@ -25,10 +25,10 @@ export default class FolderList extends Component {
         const { folderList } = this.props;
 
         return (
-            <section className = { Styles.boxTaskList }>
+            <section className = { Styles.folderList }>
                 <ol className = { Styles.folderMenu }>{ folderList }</ol>
                 <FolderMaker createFolder = { this.props.createFolder } />
-                <button onClick = { this.deleteAllFolders }>Delete all folders</button>
+                <div className = { Styles.button } onClick = { this.deleteAllFolders }>Delete all folders</div>
             </section>
         );
     }

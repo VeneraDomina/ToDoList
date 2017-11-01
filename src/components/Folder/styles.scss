@@ -1,3 +1,5 @@
+@import '../../theme/palette';
+
 .folder {
   position: relative;
   width: 100%;
@@ -7,12 +9,12 @@
   input[type='text'] {
     outline: none;
     border: 0;
-    background-color: #92d4d2;
+    background-color: $paletteColor3;
     width: calc(100% - 3px);
     font-family: 'Crimson Text', serif;
     font-weight: 500;
     cursor: pointer;
-    color: #000;
+    color: $paletteColor1;
   }
 
   span {
@@ -22,7 +24,7 @@
     outline: 0;
     //display: none;
     font-family: 'Crimson Text', serif;
-    background-color: #92d4d2;
+    background-color: $paletteColor3;
     font-size: 12px;
     letter-spacing: 1px;
     cursor: pointer;
