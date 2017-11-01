@@ -32,7 +32,7 @@ export default class Folder extends Component {
                         value = { folder }
                     />
                 </a>
-                <span onClick = { this.deleteFolder }>Del</span>
+                <span onClick = { this.deleteFolder }>X</span>
             </section>
         );
     }

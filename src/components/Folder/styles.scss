@@ -1,6 +1,6 @@
 .folder {
   position: relative;
-  width: 300px;
+  width: 100%;
   font-family: 'Crimson Text', serif;
   font-size: 14px;
 
@@ -8,18 +8,19 @@
     outline: none;
     border: 0;
     background-color: #92d4d2;
-    width: 200px;
+    width: calc(100% - 3px);
     font-family: 'Crimson Text', serif;
     font-weight: 500;
+    cursor: pointer;
     color: #000;
   }
 
   span {
     position: absolute;
     right: 20px;
-    width: 30px;
     border: 0;
     outline: 0;
+    //display: none;
     font-family: 'Crimson Text', serif;
     background-color: #92d4d2;
     font-size: 12px;

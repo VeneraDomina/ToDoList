@@ -3,6 +3,8 @@ import TaskList from '../TaskList';
 import FolderList from '../FolderList';
 import Styles from './styles.scss';
 import Folder from '../Folder';
+import { Transition } from 'react-transition-group';
+import { fromTo } from 'gsap';
 
 export default class Feed extends Component {
     constructor () {
@@ -16,6 +18,8 @@ export default class Feed extends Component {
         this.createTask =:: this._createTask;
         this.selectedFolder =:: this._selectedFolder;
         this.deleteTask =:: this._deleteTask;
+        this.folderAppear =:: this._folderAppear;
+        this.taskListAppear =:: this._taskListAppear;
     }
     state = {
         folders:  [],
@@ -112,6 +116,22 @@ export default class Feed extends Component {
             folderID: _id
         }));
     }
+    _folderAppear (folder) {
+        fromTo(
+            folder,
+            1,
+            { x: -1000 },
+            { x: 0 }
+        );
+    }
+    _taskListAppear (taskList) {
+        fromTo(
+            taskList,
+            1,
+            { x: -1000 },
+            { x: 0 }
+        );
+    }
     render () {
         let taskArray = [];
         const { folders, folderID } = this.state;
@@ -134,17 +154,29 @@ export default class Feed extends Component {
 
         return (
             <section className = { Styles.feed }>
-                <FolderList
-                    createFolder = { this.createFolder }
-                    deleteAllFolders = { this.deleteAllFolders }
-                    deleteFolder = { this.deleteFolder }
-                    folderList = { folderList }
-                />
-                <TaskList
-                    createTask = { this.createTask }
-                    deleteTask = { this.deleteTask }
-                    tasks = { taskArray }
-                />
+                <Transition
+                    appear
+                    in
+                    timeout = { 1000 }
+                    onEnter = { this.folderAppear }>
+                    <FolderList
+                        createFolder = { this.createFolder }
+                        deleteAllFolders = { this.deleteAllFolders }
+                        deleteFolder = { this.deleteFolder }
+                        folderList = { folderList }
+                    />
+                </Transition>
+                <Transition
+                    appear
+                    in
+                    timeout = { 1000 }
+                    onEnter = { this.taskListAppear }>
+                    <TaskList
+                        createTask = { this.createTask }
+                        deleteTask = { this.deleteTask }
+                        tasks = { taskArray }
+                    />
+                </Transition>
             </section>
         );
     }

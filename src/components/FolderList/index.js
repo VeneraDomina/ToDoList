@@ -28,7 +28,7 @@ export default class FolderList extends Component {
             <section className = { Styles.boxTaskList }>
                 <ol className = { Styles.folderMenu }>{ folderList }</ol>
                 <FolderMaker createFolder = { this.props.createFolder } />
-                <button onClick = { this.deleteAllFolders }>clear</button>
+                <button onClick = { this.deleteAllFolders }>Delete all folders</button>
             </section>
         );
     }

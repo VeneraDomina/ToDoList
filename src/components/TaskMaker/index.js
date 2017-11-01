@@ -49,7 +49,9 @@ export default class TaskMaker extends Component {
 
         return (
             <section className = { Styles.task }>
-                <form onSubmit = { this.handleSubmit }>
+                <form
+                    className = { Styles.form }
+                    onSubmit = { this.handleSubmit }>
                     <input
                         placeholder = 'new task'
                         type = 'text'
