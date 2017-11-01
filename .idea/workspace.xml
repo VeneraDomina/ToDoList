@@ -3,14 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="0603e0dd-2602-4b63-8e1f-7d557dfdb1cb" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/Folder/styles.scss" afterPath="$PROJECT_DIR$/src/components/Folder/styles.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/FolderList/index.js" afterPath="$PROJECT_DIR$/src/components/FolderList/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/FolderList/styles.scss" afterPath="$PROJECT_DIR$/src/components/FolderList/styles.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/FolderMaker/styles.scss" afterPath="$PROJECT_DIR$/src/components/FolderMaker/styles.scss" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/Task/styles.scss" afterPath="$PROJECT_DIR$/src/components/Task/styles.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/TaskList/styles.scss" afterPath="$PROJECT_DIR$/src/components/TaskList/styles.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/TaskMaker/styles.scss" afterPath="$PROJECT_DIR$/src/components/TaskMaker/styles.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/theme/palette.scss" afterPath="$PROJECT_DIR$/src/theme/palette.scss" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -37,11 +30,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="styles.scss" pinned="false" current-in-tab="true">
+      <file leaf-file-name="styles.scss" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/Folder/styles.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="156">
+            <state relative-caret-position="238">
               <caret line="14" column="18" lean-forward="true" selection-start-line="14" selection-start-column="18" selection-end-line="14" selection-end-column="18" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="styles.scss" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/components/Task/styles.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="85">
+              <caret line="5" column="19" lean-forward="false" selection-start-line="5" selection-start-column="19" selection-end-line="5" selection-end-column="19" />
               <folding />
             </state>
           </provider>
@@ -102,11 +105,11 @@
         <option value="$PROJECT_DIR$/src/components/TaskList/styles.scss" />
         <option value="$PROJECT_DIR$/src/components/TaskMaker/styles.scss" />
         <option value="$PROJECT_DIR$/src/components/FolderMaker/styles.scss" />
-        <option value="$PROJECT_DIR$/src/components/Task/styles.scss" />
         <option value="$PROJECT_DIR$/src/theme/palette.scss" />
         <option value="$PROJECT_DIR$/src/components/FolderList/index.js" />
         <option value="$PROJECT_DIR$/src/components/FolderList/styles.scss" />
         <option value="$PROJECT_DIR$/src/components/Folder/styles.scss" />
+        <option value="$PROJECT_DIR$/src/components/Task/styles.scss" />
       </list>
     </option>
   </component>
@@ -122,10 +125,10 @@
     <handled-path value="$PROJECT_DIR$/node_modules" />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="92" />
-    <option name="y" value="322" />
+    <option name="x" value="374" />
+    <option name="y" value="237" />
     <option name="width" value="1123" />
-    <option name="height" value="954" />
+    <option name="height" value="986" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -304,15 +307,15 @@
       <updated>1508833400400</updated>
       <workItem from="1508833401908" duration="91281000" />
       <workItem from="1509193016540" duration="54899000" />
-      <workItem from="1509437504711" duration="33373000" />
+      <workItem from="1509437504711" duration="33588000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="179553000" />
+    <option name="totallyTimeSpent" value="179768000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="92" y="322" width="1123" height="954" extended-state="0" />
+    <frame x="374" y="237" width="1123" height="986" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20737328" sideWeight="0.5750751" order="2" side_tool="false" content_ui="combo" />
@@ -322,7 +325,7 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2072072" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.14779602" sideWeight="0.4249249" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24978392" sideWeight="0.49242425" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27892813" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26846424" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.10450686" sideWeight="0.11661342" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -612,14 +615,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Task/styles.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="179">
-          <caret line="68" column="36" lean-forward="false" selection-start-line="68" selection-start-column="36" selection-end-line="68" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/TaskMaker/styles.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -670,8 +665,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/Folder/styles.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="156">
+        <state relative-caret-position="238">
           <caret line="14" column="18" lean-forward="true" selection-start-line="14" selection-start-column="18" selection-end-line="14" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Task/styles.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="19" lean-forward="false" selection-start-line="5" selection-start-column="19" selection-end-line="5" selection-end-column="19" />
           <folding />
         </state>
       </provider>
