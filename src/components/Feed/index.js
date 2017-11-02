@@ -136,14 +136,15 @@ export default class Feed extends Component {
         let taskArray = [];
         const { folders, folderID } = this.state;
         const folderList = folders.map((folder) => (
-            <li key = { folder._id }>
-                <Folder
-                    _id = { folder._id }
-                    deleteFolder = { this.deleteFolder }
-                    folder = { folder.folder }
-                    selectedFolder = { this.selectedFolder }
-                />
-            </li>
+
+            <Folder
+                _id = { folder._id }
+                deleteFolder = { this.deleteFolder }
+                folder = { folder.folder }
+                key = { folder._id }
+                selectedFolder = { this.selectedFolder }
+            />
+
         ));
 
         folders.filter((folder) => {

@@ -52,7 +52,7 @@ export default class TaskList extends Component {
                     appear
                     in
                     key = { _id }
-                    timeout = { 1000 }
+                    timeout = { 200 }
                     onEnter = { this.taskAppear }>
                     <Task
                         _id = { _id }
@@ -69,7 +69,7 @@ export default class TaskList extends Component {
                 <Transition
                     appear
                     in
-                    timeout = { 1000 }
+                    timeout = { 200 }
                     onEnter = { this.appearTaskMaker }>
                     <TaskMaker createTask = { this.createTask } />
                 </Transition>

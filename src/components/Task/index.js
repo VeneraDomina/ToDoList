@@ -24,15 +24,9 @@ export default class Task extends Component {
     _toggleClassSelect () {
         const { isSelected } = this.state;
 
-        if (isSelected) {
-            this.setState(() => ({
-                isSelected: false
-            }));
-        } else {
-            this.setState(() => ({
-                isSelected: true
-            }));
-        }
+        this.setState(() => ({
+            isSelected: !isSelected
+        }));
     }
 
     render () {

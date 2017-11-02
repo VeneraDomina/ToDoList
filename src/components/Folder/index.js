@@ -25,15 +25,11 @@ export default class Folder extends Component {
         const { folder } = this.props;
 
         return (
-            <section className = { Styles.folder } onClick = { this.selectedFolder }>
-                <a>
-                    <input
-                        type = 'text'
-                        value = { folder }
-                    />
-                </a>
-                <span onClick = { this.deleteFolder }>X</span>
-            </section>
+            <li className = { Styles.folder } onClick = { this.selectedFolder }>
+
+                <p>{ folder }<span onClick = { this.deleteFolder }>X</span></p>
+
+            </li>
         );
     }
 }

@@ -6,11 +6,12 @@
   font-family: 'Crimson Text', serif;
   font-size: 14px;
 
-  input[type='text'] {
+  p {
+    margin: 0;
     outline: none;
     border: 0;
     background-color: $paletteColor3;
-    width: calc(100% - 3px);
+    width: calc(100% - 30px);
     font-family: 'Crimson Text', serif;
     font-weight: 500;
     cursor: pointer;
