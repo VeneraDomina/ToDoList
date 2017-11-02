@@ -64,16 +64,3 @@ export default class TaskMaker extends Component {
         );
     }
 }
-
-
-/*<section className = { Styles.task }>
-                <input name = 'task' type = 'checkbox' />
-                <label htmlFor = 'task'
-                       onClick = { this.labelClick }>
-                    { labelValue }
-                </label>
-                <input type = 'text'
-                       value = { taskValue }
-                       onChange = { this.handleTaskChange }>
-                </input>
-            </section>*/

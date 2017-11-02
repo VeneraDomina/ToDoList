@@ -6,6 +6,7 @@ export default class Task extends Component {
     static propTypes = {
         _id:        PropTypes.string.isRequired,
         deleteTask: PropTypes.func.isRequired,
+        editTask:   PropTypes.func.isRequired,
         task:       PropTypes.string.isRequired
     };
 
@@ -13,9 +14,12 @@ export default class Task extends Component {
         super();
         this.deleteTask =:: this._deleteTask;
         this.toggleClassSelect =:: this._toggleClassSelect;
+        this.editTask =:: this._editTask;
+        this.editOnBlur =:: this._editOnBlur;
     }
     state = {
-        isSelected: false
+        isSelected: false,
+        isEditing:  false
     };
 
     _deleteTask () {
@@ -28,10 +32,21 @@ export default class Task extends Component {
             isSelected: !isSelected
         }));
     }
+    _editTask () {
+        this.props.editTask(this.props._id);
+        this.setState(() => ({
+            isEditing: true
+        }));
+    }
+    _editOnBlur () {
+        this.setState(() => ({
+            isEditing: false
+        }));
+    }
 
     render () {
         const { task } = this.props;
-        const { isSelected } = this.state;
+        const { isSelected, isEditing } = this.state;
         const isDone = isSelected
             ? <div
                 className = { Styles.selected }
@@ -42,8 +57,20 @@ export default class Task extends Component {
                 onClick = { this.toggleClassSelect }
             />;
         const isDoneTask = isSelected
-            ? <span className = { Styles.taskValueDone }>{ task }</span>
-            : <span className = { Styles.taskValue }>{ task }</span>;
+            ? <span
+                className = { Styles.taskValueDone }
+                contentEditable = { isEditing }
+                onBlur = { this.editOnBlur }
+                onClick = { this.editTask }>
+                { task }
+            </span>
+            : <span
+                className = { Styles.taskValue }
+                contentEditable = { isEditing }
+                onBlur = { this.editOnBlur }
+                onClick = { this.editTask }>
+                { task }
+            </span>;
 
         return (
             <section className = { Styles.task }>

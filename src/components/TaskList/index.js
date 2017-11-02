@@ -10,6 +10,7 @@ export default class TaskList extends Component {
     static propTypes = {
         createTask: PropTypes.func.isRequired,
         deleteTask: PropTypes.func.isRequired,
+        editTask:   PropTypes.func.isRequired,
         tasks:      PropTypes.array.isRequired
     };
     constructor () {
@@ -18,6 +19,7 @@ export default class TaskList extends Component {
         this.deleteTask =:: this._deleteTask;
         this.taskAppear =:: this._taskAppear;
         this.appearTaskMaker =:: this._appearTaskMaker;
+        this.editTask =:: this._editTask;
     }
 
     _createTask (newTask) {
@@ -25,6 +27,9 @@ export default class TaskList extends Component {
     }
     _deleteTask (_id) {
         this.props.deleteTask(_id);
+    }
+    _editTask (_id) {
+        this.props.editTask(_id);
     }
     _taskAppear (task) {
         fromTo(
@@ -57,6 +62,7 @@ export default class TaskList extends Component {
                     <Task
                         _id = { _id }
                         deleteTask = { this.deleteTask }
+                        editTask = { this.editTask }
                         task = { task }
                     />
                 </Transition>

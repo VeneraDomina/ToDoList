@@ -20,6 +20,7 @@ export default class Feed extends Component {
         this.deleteTask =:: this._deleteTask;
         this.folderAppear =:: this._folderAppear;
         this.taskListAppear =:: this._taskListAppear;
+        this.editTask =:: this._editTask;
     }
     state = {
         folders:  [],
@@ -111,6 +112,9 @@ export default class Feed extends Component {
         }));
         localStorage.setItem('folders', JSON.stringify(folders));
     }
+    _editTask (_id) {
+        console.log('edit', _id);
+    }
     _selectedFolder (_id) {
         this.setState(() => ({
             folderID: _id
@@ -175,6 +179,7 @@ export default class Feed extends Component {
                     <TaskList
                         createTask = { this.createTask }
                         deleteTask = { this.deleteTask }
+                        editTask = { this.editTask }
                         tasks = { taskArray }
                     />
                 </Transition>
