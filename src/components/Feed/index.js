@@ -113,7 +113,11 @@ export default class Feed extends Component {
         localStorage.setItem('folders', JSON.stringify(folders));
     }
     _editTask (_id) {
-        console.log('edit', _id);
+        const { folders, folderID } = this.state;
+        const folderToChange = folders.filter((folder) => folder._id === folderID);
+        const taskToChange = folderToChange[0].taskList.filter((task) => task._id === _id);
+
+        console.log(taskToChange[0]);
     }
     _selectedFolder (_id) {
         this.setState(() => ({

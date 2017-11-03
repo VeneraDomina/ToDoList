@@ -16,6 +16,7 @@ export default class Task extends Component {
         this.toggleClassSelect =:: this._toggleClassSelect;
         this.editTask =:: this._editTask;
         this.editOnBlur =:: this._editOnBlur;
+        this.handlerChangeValue =:: this._handlerChangeValue;
     }
     state = {
         isSelected: false,
@@ -37,6 +38,9 @@ export default class Task extends Component {
         this.setState(() => ({
             isEditing: true
         }));
+    }
+    _handlerChangeValue (event) {
+        console.log(event.target);
     }
     _editOnBlur () {
         this.setState(() => ({
@@ -61,14 +65,16 @@ export default class Task extends Component {
                 className = { Styles.taskValueDone }
                 contentEditable = { isEditing }
                 onBlur = { this.editOnBlur }
-                onClick = { this.editTask }>
+                onClick = { this.editTask }
+                onInput = { this.handlerChangeValue }>
                 { task }
             </span>
             : <span
                 className = { Styles.taskValue }
                 contentEditable = { isEditing }
                 onBlur = { this.editOnBlur }
-                onClick = { this.editTask }>
+                onClick = { this.editTask }
+                onInput = { this.handlerChangeValue }>
                 { task }
             </span>;
 
