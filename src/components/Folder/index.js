@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Styles from './styles.scss';
 import PropTypes from 'prop-types';
+import ContentEditable from 'react-contenteditable';
 
 export default class Folder extends Component {
     static propTypes = {
@@ -26,9 +27,7 @@ export default class Folder extends Component {
 
         return (
             <li className = { Styles.folder } onClick = { this.selectedFolder }>
-
                 <p>{ folder }<span onClick = { this.deleteFolder }>X</span></p>
-
             </li>
         );
     }

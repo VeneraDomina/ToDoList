@@ -28,8 +28,8 @@ export default class TaskList extends Component {
     _deleteTask (_id) {
         this.props.deleteTask(_id);
     }
-    _editTask (_id) {
-        this.props.editTask(_id);
+    _editTask (_id, editedTask) {
+        this.props.editTask(_id, editedTask);
     }
     _taskAppear (task) {
         fromTo(

@@ -112,12 +112,28 @@ export default class Feed extends Component {
         }));
         localStorage.setItem('folders', JSON.stringify(folders));
     }
-    _editTask (_id) {
+    _editTask (_id, editedTask) {
         const { folders, folderID } = this.state;
         const folderToChange = folders.filter((folder) => folder._id === folderID);
-        const taskToChange = folderToChange[0].taskList.filter((task) => task._id === _id);
+        const editingTaskList = folderToChange[0].taskList.map((task) => {
+            if (task._id === _id) {
+                task.task = editedTask;
+            }
 
-        console.log(taskToChange[0]);
+            return task;
+        });
+        const foldersEditTask = folders.map((folder) => {
+            if (folder._id === folderID) {
+                folder.taskList = editingTaskList;
+            }
+
+            return folder;
+        });
+
+        this.setState(() => ({
+            folders: foldersEditTask
+        }));
+        localStorage.setItem('folders', JSON.stringify(folders));
     }
     _selectedFolder (_id) {
         this.setState(() => ({

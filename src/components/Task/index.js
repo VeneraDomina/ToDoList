@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Styles from './styles.scss';
 import PropTypes from 'prop-types';
+import ContentEditable from 'react-contenteditable';
 
 export default class Task extends Component {
     static propTypes = {
@@ -14,13 +15,10 @@ export default class Task extends Component {
         super();
         this.deleteTask =:: this._deleteTask;
         this.toggleClassSelect =:: this._toggleClassSelect;
-        this.editTask =:: this._editTask;
-        this.editOnBlur =:: this._editOnBlur;
         this.handlerChangeValue =:: this._handlerChangeValue;
     }
     state = {
-        isSelected: false,
-        isEditing:  false
+        isSelected: false
     };
 
     _deleteTask () {
@@ -33,24 +31,16 @@ export default class Task extends Component {
             isSelected: !isSelected
         }));
     }
-    _editTask () {
-        this.props.editTask(this.props._id);
-        this.setState(() => ({
-            isEditing: true
-        }));
-    }
+
     _handlerChangeValue (event) {
-        console.log(event.target);
-    }
-    _editOnBlur () {
-        this.setState(() => ({
-            isEditing: false
-        }));
+        const editedTask = event.target.value;
+
+        this.props.editTask(this.props._id, editedTask);
     }
 
     render () {
         const { task } = this.props;
-        const { isSelected, isEditing } = this.state;
+        const { isSelected } = this.state;
         const isDone = isSelected
             ? <div
                 className = { Styles.selected }
@@ -61,22 +51,18 @@ export default class Task extends Component {
                 onClick = { this.toggleClassSelect }
             />;
         const isDoneTask = isSelected
-            ? <span
+            ? <ContentEditable
                 className = { Styles.taskValueDone }
-                contentEditable = { isEditing }
-                onBlur = { this.editOnBlur }
-                onClick = { this.editTask }
-                onInput = { this.handlerChangeValue }>
-                { task }
-            </span>
-            : <span
+                disabled = { false }
+                html = { task }
+                onChange = { this.handlerChangeValue }
+            />
+            : <ContentEditable
                 className = { Styles.taskValue }
-                contentEditable = { isEditing }
-                onBlur = { this.editOnBlur }
-                onClick = { this.editTask }
-                onInput = { this.handlerChangeValue }>
-                { task }
-            </span>;
+                disabled = { false }
+                html = { task }
+                onChange = { this.handlerChangeValue }
+            />;
 
         return (
             <section className = { Styles.task }>
