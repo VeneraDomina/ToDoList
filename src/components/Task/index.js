@@ -20,7 +20,9 @@ export default class Task extends Component {
     state = {
         isSelected: false
     };
-
+    shouldComponentUpdate (nextProps) {
+        return !(this.props.task === nextProps.task);
+    }
     _deleteTask () {
         this.props.deleteTask(this.props._id);
     }

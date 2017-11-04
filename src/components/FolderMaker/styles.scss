@@ -11,8 +11,8 @@
     outline: none;
     border: 0;
     background-color: $paletteColor3;
-    margin-left: 35px;
-    width: calc(100% - 35px);
+    margin-left: 25px;
+    width: calc(100% - 30px);
     font-family: 'Crimson Text', serif;
     font-weight: 500;
     color: $paletteColor1;
@@ -20,7 +20,7 @@
 
   input[type='submit']{
     position: absolute;
-    right: 20px;
+    right: 5px;
     width: 30px;
     height: 20px;
     border: 0;

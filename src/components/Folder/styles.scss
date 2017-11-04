@@ -2,76 +2,82 @@
 
 .folder {
   position: relative;
-  width: 100%;
+  width: 95%;
   font-family: 'Crimson Text', serif;
   font-size: 14px;
+  padding-left: 5px;
+  border: 1px solid $paletteColor3;
 
-  p {
+  .contentValue {
     margin: 0;
     padding: 2px 0;
     outline: none;
     background-color: $paletteColor3;
-    width: 100%;
+    width: 90%;
     font-family: 'Crimson Text', serif;
     font-weight: 500;
     cursor: pointer;
     color: $paletteColor1;
-
-    span {
-      position: absolute;
-      right: 20px;
-      border: 0;
-      outline: 0;
-      //display: none;
-      font-family: 'Crimson Text', serif;
-      background-color: $paletteColor3;
-      font-size: 12px;
-      cursor: pointer;
-    }
+    display: inline-block;
+  }
+  span {
+    position: absolute;
+    right: 5px;
+    border: 0;
+    outline: 0;
+    //display: none;
+    background-color: $paletteColor3;
+    font-family: 'Crimson Text', serif;
+    font-size: 12px;
+    cursor: pointer;
   }
 }
 
 .folder:hover {
   background-color: $paletteColor4;
+  border: 1px solid $paletteColor4;
+  border-radius: 5px;
 
-  p{
+  .contentValue {
     background-color: $paletteColor4;
-
-    span {
-      background-color: $paletteColor4;
-      //display: block;
-      font-size: 14px;
-    }
+  }
+  span {
+    background-color: $paletteColor4;
+    //display: block;
   }
 }
 
 .folderSelected {
-  background-color: $paletteColor4;
   position: relative;
-  width: 100%;
+  width: 95%;
+  padding-left: 5px;
   font-family: 'Crimson Text', serif;
   font-size: 14px;
+  border: 1px solid $paletteColor4;
+  border-radius: 5px;
+  background-color: $paletteColor4;
 
-  p {
+  .contentValue {
     margin: 0;
     padding: 2px 0;
     outline: none;
     background-color: $paletteColor4;
-    width: 100%;
+    width: 90%;
     font-family: 'Crimson Text', serif;
     font-weight: 500;
     cursor: pointer;
     color: $paletteColor1;
-
-    span {
-      position: absolute;
-      right: 20px;
-      border: 0;
-      outline: 0;
-      font-family: 'Crimson Text', serif;
-      background-color: $paletteColor4;
-      font-size: 12px;
-      cursor: pointer;
-    }
+    display: inline-block;
+  }
+  span {
+    position: absolute;
+    right: 5px;
+    border: 0;
+    outline: 0;
+    //display: none;
+    background-color: $paletteColor4;
+    font-family: 'Crimson Text', serif;
+    font-size: 12px;
+    cursor: pointer;
   }
 }

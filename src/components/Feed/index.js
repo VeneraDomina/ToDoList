@@ -21,6 +21,7 @@ export default class Feed extends Component {
         this.folderAppear =:: this._folderAppear;
         this.taskListAppear =:: this._taskListAppear;
         this.editTask =:: this._editTask;
+        this.editFolder =:: this._editFolder;
     }
     state = {
         folders:  [],
@@ -79,6 +80,21 @@ export default class Feed extends Component {
         this.setState(() => ({
             folders: this.getFolders()
         }));
+    }
+    _editFolder (_id, editedFolder) {
+        const { folders, folderID } = this.state;
+        const foldersEdited = folders.map((folder) => {
+            if (folder._id === folderID) {
+                folder.folder = editedFolder;
+            }
+
+            return folder;
+        });
+
+        this.setState(() => ({
+            folders: foldersEdited
+        }));
+        localStorage.setItem('folders', JSON.stringify(folders));
     }
     _createTask (newTask) {
         const { folders, folderID } = this.state;
@@ -164,7 +180,9 @@ export default class Feed extends Component {
             <Folder
                 _id = { folder._id }
                 deleteFolder = { this.deleteFolder }
+                editFolder = { this.editFolder }
                 folder = { folder.folder }
+                folderID = { folderID }
                 key = { folder._id }
                 selectedFolder = { this.selectedFolder }
             />

@@ -14,6 +14,9 @@ export default class FolderList extends Component {
         this.deleteAllFolders =:: this._deleteAllFolders;
         this.createFolder = ::this._createFolder;
     }
+    shouldComponentUpdate (nextProps) {
+        return !(this.props.folderList === nextProps.folderList);
+    }
     _createFolder (newFolder) {
         this.props.createFolder(newFolder);
     }

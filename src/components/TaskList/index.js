@@ -21,7 +21,9 @@ export default class TaskList extends Component {
         this.appearTaskMaker =:: this._appearTaskMaker;
         this.editTask =:: this._editTask;
     }
-
+    shouldComponentUpdate (nextProps) {
+        return !(this.props.tasks === nextProps.tasks);
+    }
     _createTask (newTask) {
         this.props.createTask(newTask);
     }
