@@ -15,7 +15,9 @@ export default class FolderList extends Component {
         this.createFolder = ::this._createFolder;
     }
     shouldComponentUpdate (nextProps) {
-        return !(this.props.folderList === nextProps.folderList);
+        const isEqual = this.props.folderList.length !== nextProps.folderList.length;
+
+        return isEqual;
     }
     _createFolder (newFolder) {
         this.props.createFolder(newFolder);
@@ -25,6 +27,7 @@ export default class FolderList extends Component {
     }
 
     render () {
+        console.log('render FolderList');
         const { folderList } = this.props;
 
         return (

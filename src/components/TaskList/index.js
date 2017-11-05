@@ -22,7 +22,9 @@ export default class TaskList extends Component {
         this.editTask =:: this._editTask;
     }
     shouldComponentUpdate (nextProps) {
-        return !(this.props.tasks === nextProps.tasks);
+        const isEqual = this.props.tasks.length !== nextProps.tasks.length;
+
+        return isEqual;
     }
     _createTask (newTask) {
         this.props.createTask(newTask);
@@ -51,6 +53,7 @@ export default class TaskList extends Component {
     }
 
     render () {
+        console.log('render TaskList');
         const { tasks } = this.props;
         const header = 'Let\'s do this!';
         const taskList = tasks.map(
