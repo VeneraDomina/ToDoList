@@ -21,7 +21,7 @@ export default class Task extends Component {
         isSelected: false
     };
     shouldComponentUpdate (nextProps) {
-        return !(this.props.task === nextProps.task);
+        return !(this.state === nextProps.state && this.props.task === nextProps.task);
     }
     _deleteTask () {
         this.props.deleteTask(this.props._id);
@@ -43,33 +43,19 @@ export default class Task extends Component {
     render () {
         const { task } = this.props;
         const { isSelected } = this.state;
-        const isDone = isSelected
-            ? <div
-                className = { Styles.selected }
-                onClick = { this.toggleClassSelect }
-            />
-            : <div
-                className = { Styles.select }
-                onClick = { this.toggleClassSelect }
-            />;
-        const isDoneTask = isSelected
-            ? <ContentEditable
-                className = { Styles.taskValueDone }
-                disabled = { false }
-                html = { task }
-                onChange = { this.handlerChangeValue }
-            />
-            : <ContentEditable
-                className = { Styles.taskValue }
-                disabled = { false }
-                html = { task }
-                onChange = { this.handlerChangeValue }
-            />;
 
         return (
             <section className = { Styles.task }>
-                { isDone }
-                { isDoneTask }
+                <div
+                    className = { isSelected ? Styles.selected : Styles.select }
+                    onClick = { this.toggleClassSelect }
+                />
+                <ContentEditable
+                    className = { isSelected ? Styles.taskValueDone : Styles.taskValue }
+                    disabled = { false }
+                    html = { task }
+                    onChange = { this.handlerChangeValue }
+                />
                 <span onClick = { this.deleteTask }>Del</span>
             </section>
         );

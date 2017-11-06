@@ -53,7 +53,6 @@ export default class TaskList extends Component {
     }
 
     render () {
-        console.log('render TaskList');
         const { tasks } = this.props;
         const header = 'Let\'s do this!';
         const taskList = tasks.map(

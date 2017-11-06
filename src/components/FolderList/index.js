@@ -7,6 +7,7 @@ export default class FolderList extends Component {
     static propTypes = {
         createFolder:     PropTypes.func.isRequired,
         deleteAllFolders: PropTypes.func.isRequired,
+        folderID:         PropTypes.string.isRequired,
         folderList:       PropTypes.array.isRequired
     };
     constructor () {
@@ -15,9 +16,7 @@ export default class FolderList extends Component {
         this.createFolder = ::this._createFolder;
     }
     shouldComponentUpdate (nextProps) {
-        const isEqual = this.props.folderList.length !== nextProps.folderList.length;
-
-        return isEqual;
+        return !(this.props.folderList.length === nextProps.folderList.length && this.props.folderID === nextProps.folderID);
     }
     _createFolder (newFolder) {
         this.props.createFolder(newFolder);
@@ -27,7 +26,6 @@ export default class FolderList extends Component {
     }
 
     render () {
-        console.log('render FolderList');
         const { folderList } = this.props;
 
         return (

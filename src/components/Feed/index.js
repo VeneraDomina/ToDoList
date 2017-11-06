@@ -206,6 +206,7 @@ export default class Feed extends Component {
                         createFolder = { this.createFolder }
                         deleteAllFolders = { this.deleteAllFolders }
                         deleteFolder = { this.deleteFolder }
+                        folderID = { folderID }
                         folderList = { folderList }
                     />
                 </Transition>

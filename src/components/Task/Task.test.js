@@ -3,12 +3,11 @@ import Adapter from 'enzyme-adapter-react-16';
 import Enzyme from 'enzyme';
 import { shallow } from 'enzyme';
 import Task from './';
-import { taskProps } from '../../helpers/helperForTest';
+import { myProps } from '../../helpers/helperForTest';
 
 Enzyme.configure({ adapter: new Adapter() });
 
-const { _id, task } = taskProps;
-const message = 'Hello';
+const { _id, task } = myProps;
 const state = {
     isSelected: false
 };
@@ -39,7 +38,7 @@ describe('Task component:', () => {
     test('Should have initial state: false', () => {
         expect(result.state()).toEqual(state);
     });
-    test('Should toggle state to true', () => {
+    test('Should toggle state', () => {
         result.find('div').simulate('click');
         expect(result.state()).toEqual(mutatedState);
     });

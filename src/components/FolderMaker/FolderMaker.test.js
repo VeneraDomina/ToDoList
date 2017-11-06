@@ -2,21 +2,21 @@ import React from 'react';
 import Adapter from 'enzyme-adapter-react-16';
 import Enzyme from 'enzyme';
 import { shallow } from 'enzyme';
-import TaskMaker from './';
+import FolderMaker from './';
 
 Enzyme.configure({ adapter: new Adapter() });
 const message = 'Hello';
 const state = {
-    taskValue: ''
+    folderValue: ''
 };
 const mutatedState = {
-    taskValue: message
+    folderValue: message
 };
 const result = shallow(
-    <TaskMaker createTask = { () => null } />
+    <FolderMaker createFolder = { () => null } />
 );
 
-describe('TaskMaker component: ', () => {
+describe('FolderMaker component: ', () => {
     test('Should have 1 \'section\' element', () => {
         expect(result.find('section')).toHaveLength(1);
     });

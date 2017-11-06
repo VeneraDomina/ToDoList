@@ -35,8 +35,9 @@ export default class Folder extends Component {
 
     render () {
         const { folder, folderID, _id } = this.props;
-        const folderForRender = folderID === _id
-            ? <li className = { Styles.folderSelected } onClick = { this.selectedFolder }>
+
+        return (
+            <li className = { folderID === _id ? Styles.folderSelected : Styles.folder } onClick = { this.selectedFolder }>
 
                 <ContentEditable
                     className = { Styles.contentValue }
@@ -46,17 +47,6 @@ export default class Folder extends Component {
                 />
                 <span onClick = { this.deleteFolder }>X</span>
             </li>
-            : <li className = { Styles.folder } onClick = { this.selectedFolder }>
-
-                <ContentEditable
-                    className = { Styles.contentValue }
-                    disabled = { false }
-                    html = { folder }
-                    onChange = { this.handlerChangeValue }
-                />
-                <span onClick = { this.deleteFolder }>X</span>
-            </li>;
-
-        return folderForRender;
+        );
     }
 }
