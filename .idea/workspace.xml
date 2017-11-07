@@ -2,24 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0603e0dd-2602-4b63-8e1f-7d557dfdb1cb" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/Feed/Feed.test.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/Folder/Folder.test.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/FolderList/FolderList.test.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/FolderMaker/FolderMaker.test.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/helpers/helpers.test.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package-lock.json" afterPath="$PROJECT_DIR$/package-lock.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/Feed/index.js" afterPath="$PROJECT_DIR$/src/components/Feed/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/Folder/index.js" afterPath="$PROJECT_DIR$/src/components/Folder/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/FolderList/index.js" afterPath="$PROJECT_DIR$/src/components/FolderList/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/Task/Task.test.js" afterPath="$PROJECT_DIR$/src/components/Task/Task.test.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/Task/index.js" afterPath="$PROJECT_DIR$/src/components/Task/index.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/TaskList/TaskList.test.js" afterPath="$PROJECT_DIR$/src/components/TaskList/TaskList.test.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/TaskList/index.js" afterPath="$PROJECT_DIR$/src/components/TaskList/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/TaskMaker/TaskMaker.test.js" afterPath="$PROJECT_DIR$/src/components/TaskMaker/TaskMaker.test.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/helpers/helperForTest.js" afterPath="$PROJECT_DIR$/src/helpers/helperForTest.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/helpers/index.js" afterPath="$PROJECT_DIR$/src/helpers/index.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -39,9 +24,11 @@
       <file leaf-file-name="TaskList.test.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/components/TaskList/TaskList.test.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="21" column="7" lean-forward="false" selection-start-line="21" selection-start-column="7" selection-end-line="21" selection-end-column="7" />
-              <folding />
+            <state relative-caret-position="347">
+              <caret line="22" column="4" lean-forward="false" selection-start-line="22" selection-start-column="4" selection-end-line="22" selection-end-column="4" />
+              <folding>
+                <element signature="e#0#26#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -49,12 +36,45 @@
       <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/TaskList/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="873">
-              <caret line="75" column="42" lean-forward="false" selection-start-line="75" selection-start-column="42" selection-end-line="75" selection-end-column="49" />
+            <state relative-caret-position="421">
+              <caret line="81" column="37" lean-forward="false" selection-start-line="81" selection-start-column="37" selection-end-line="81" selection-end-column="37" />
               <folding>
+                <element signature="e#0#41#0" expanded="true" />
                 <element signature="e#1211#1324#0" expanded="false" />
                 <element signature="e#1358#1476#0" expanded="false" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Task.test.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/Task/Task.test.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="264">
+              <caret line="34" column="0" lean-forward="false" selection-start-line="34" selection-start-column="0" selection-end-line="36" selection-end-column="7" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Folder.test.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/Folder/Folder.test.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="47">
+              <caret line="24" column="48" lean-forward="false" selection-start-line="24" selection-start-column="48" selection-end-line="24" selection-end-column="48" />
+              <folding>
+                <element signature="e#0#26#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="helperForTest.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/helpers/helperForTest.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="7" column="35" lean-forward="false" selection-start-line="7" selection-start-column="35" selection-end-line="7" selection-end-column="35" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -95,7 +115,6 @@
         <option value="$PROJECT_DIR$/src/components/TaskMaker/styles.scss" />
         <option value="$PROJECT_DIR$/src/components/FolderMaker/styles.scss" />
         <option value="$PROJECT_DIR$/src/components/TaskMaker/TaskMaker.test.js" />
-        <option value="$PROJECT_DIR$/src/components/TaskList/index.js" />
         <option value="$PROJECT_DIR$/src/components/Task/Task.test.js" />
         <option value="$PROJECT_DIR$/src/helpers/helperForTest.js" />
         <option value="$PROJECT_DIR$/src/components/FolderList/FolderList.test.js" />
@@ -103,12 +122,13 @@
         <option value="$PROJECT_DIR$/src/components/FolderMaker/FolderMaker.test.js" />
         <option value="$PROJECT_DIR$/src/helpers/helpers.test.js" />
         <option value="$PROJECT_DIR$/src/components/Feed/Feed.test.js" />
-        <option value="$PROJECT_DIR$/src/components/TaskList/TaskList.test.js" />
         <option value="$PROJECT_DIR$/src/components/Task/index.js" />
         <option value="$PROJECT_DIR$/src/components/Folder/index.js" />
         <option value="$PROJECT_DIR$/src/components/Feed/index.js" />
         <option value="$PROJECT_DIR$/src/components/FolderList/index.js" />
         <option value="$PROJECT_DIR$/src/helpers/index.js" />
+        <option value="$PROJECT_DIR$/src/components/TaskList/index.js" />
+        <option value="$PROJECT_DIR$/src/components/TaskList/TaskList.test.js" />
       </list>
     </option>
   </component>
@@ -260,6 +280,7 @@
     <property name="node.js.path.for.package.standard" value="project" />
     <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.selected.package.standard" value="" />
+    <property name="nodejs.jest.jest_package" value="$PROJECT_DIR$/node_modules/jest" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -278,7 +299,18 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="npm.test">
+    <configuration name="TaskList component:.Should have 1 &lt;TaskMaker&gt; component" type="JavaScriptTestRunnerJest" factoryName="Jest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <working-dir value="$PROJECT_DIR$" />
+      <envs />
+      <scope-kind value="TEST" />
+      <test-file value="$PROJECT_DIR$/src/components/TaskList/TaskList.test.js" />
+      <test-names>
+        <test-name value="TaskList component:" />
+        <test-name value="Should have 1 &lt;TaskMaker&gt; component" />
+      </test-names>
+    </configuration>
     <configuration name="start" type="js.build_tools.npm" factoryName="npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
@@ -297,14 +329,16 @@
       <node-interpreter value="project" />
       <envs />
     </configuration>
-    <list size="2">
-      <item index="0" class="java.lang.String" itemvalue="npm.start" />
-      <item index="1" class="java.lang.String" itemvalue="npm.test" />
+    <list size="3">
+      <item index="0" class="java.lang.String" itemvalue="Jest.TaskList component:.Should have 1 &lt;TaskMaker&gt; component" />
+      <item index="1" class="java.lang.String" itemvalue="npm.start" />
+      <item index="2" class="java.lang.String" itemvalue="npm.test" />
     </list>
     <recent_temporary>
-      <list size="2">
-        <item index="0" class="java.lang.String" itemvalue="npm.start" />
-        <item index="1" class="java.lang.String" itemvalue="npm.test" />
+      <list size="3">
+        <item index="0" class="java.lang.String" itemvalue="npm.test" />
+        <item index="1" class="java.lang.String" itemvalue="Jest.TaskList component:.Should have 1 &lt;TaskMaker&gt; component" />
+        <item index="2" class="java.lang.String" itemvalue="npm.start" />
       </list>
     </recent_temporary>
   </component>
@@ -320,23 +354,31 @@
       <updated>1508833400400</updated>
       <workItem from="1508833401908" duration="91281000" />
       <workItem from="1509193016540" duration="54899000" />
-      <workItem from="1509437504711" duration="133070000" />
+      <workItem from="1509437504711" duration="137774000" />
     </task>
     <servers />
   </component>
+  <component name="TestHistory">
+    <history-entry file="TaskList_component__Should_have_1__TaskMaker__component - 2017.11.07 at 12h 22m 41s.xml">
+      <configuration name="TaskList component:.Should have 1 &lt;TaskMaker&gt; component" configurationId="JavaScriptTestRunnerJest" />
+    </history-entry>
+    <history-entry file="TaskList_component__Should_have_1__TaskMaker__component - 2017.11.07 at 12h 23m 50s.xml">
+      <configuration name="TaskList component:.Should have 1 &lt;TaskMaker&gt; component" configurationId="JavaScriptTestRunnerJest" />
+    </history-entry>
+  </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="279250000" />
+    <option name="totallyTimeSpent" value="283954000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.11854584" sideWeight="0.5754026" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.11854584" sideWeight="0.57246375" order="2" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.38175675" sideWeight="0.5031334" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32793018" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26002166" sideWeight="0.4968666" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.11854584" sideWeight="0.42459735" order="0" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.40195015" sideWeight="0.4968666" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.11854584" sideWeight="0.42753622" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24978392" sideWeight="0.49242425" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3336945" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.10450686" sideWeight="0.11661342" order="1" side_tool="true" content_ui="tabs" />
@@ -393,7 +435,7 @@
         <state relative-caret-position="323">
           <caret line="23" column="35" lean-forward="false" selection-start-line="23" selection-start-column="35" selection-end-line="23" selection-end-column="35" />
           <folding>
-            <element signature="e#0#41#0" expanded="false" />
+            <element signature="e#0#41#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -474,7 +516,7 @@
         <state relative-caret-position="136">
           <caret line="12" column="17" lean-forward="false" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
           <folding>
-            <element signature="e#0#41#0" expanded="false" />
+            <element signature="e#0#41#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -624,22 +666,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/helpers/helperForTest.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="35" lean-forward="false" selection-start-line="7" selection-start-column="35" selection-end-line="7" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Task/Task.test.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="394">
-          <caret line="41" column="45" lean-forward="false" selection-start-line="41" selection-start-column="45" selection-end-line="41" selection-end-column="45" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/TaskMaker/TaskMaker.test.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
@@ -671,14 +697,6 @@
           <folding>
             <element signature="e#0#26#0" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Folder/Folder.test.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="23" column="0" lean-forward="false" selection-start-line="23" selection-start-column="0" selection-end-line="26" selection-end-column="7" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -757,11 +775,38 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/helpers/helperForTest.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="35" lean-forward="false" selection-start-line="7" selection-start-column="35" selection-end-line="7" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Folder/Folder.test.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="47">
+          <caret line="24" column="48" lean-forward="false" selection-start-line="24" selection-start-column="48" selection-end-line="24" selection-end-column="48" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Task/Task.test.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="34" column="0" lean-forward="false" selection-start-line="34" selection-start-column="0" selection-end-line="36" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/TaskList/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="873">
-          <caret line="75" column="42" lean-forward="false" selection-start-line="75" selection-start-column="42" selection-end-line="75" selection-end-column="49" />
+        <state relative-caret-position="421">
+          <caret line="81" column="37" lean-forward="false" selection-start-line="81" selection-start-column="37" selection-end-line="81" selection-end-column="37" />
           <folding>
+            <element signature="e#0#41#0" expanded="true" />
             <element signature="e#1211#1324#0" expanded="false" />
             <element signature="e#1358#1476#0" expanded="false" />
           </folding>
@@ -770,9 +815,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/TaskList/TaskList.test.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="21" column="7" lean-forward="false" selection-start-line="21" selection-start-column="7" selection-end-line="21" selection-end-column="7" />
-          <folding />
+        <state relative-caret-position="347">
+          <caret line="22" column="4" lean-forward="false" selection-start-line="22" selection-start-column="4" selection-end-line="22" selection-end-column="4" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
