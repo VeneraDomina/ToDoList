@@ -22,9 +22,7 @@ export default class TaskList extends Component {
         this.editTask =:: this._editTask;
     }
     shouldComponentUpdate (nextProps) {
-        const isEqual = this.props.tasks.length !== nextProps.tasks.length;
-
-        return isEqual;
+        return this.props.tasks.length !== nextProps.tasks.length;
     }
     _createTask (newTask) {
         this.props.createTask(newTask);

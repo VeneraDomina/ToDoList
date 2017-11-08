@@ -59,6 +59,7 @@
   "devDependencies": {
     "babel-preset-stage-0": "^6.24.1",
     "enzyme-adapter-react-16": "^1.0.1",
+    "jest-localstorage-mock": "^2.0.1",
     "node-sass": "^4.5.3",
     "npm-run-all": "^4.0.2",
     "prop-types": "^15.5.10",
@@ -72,7 +73,8 @@
     ],
     "setupFiles": [
       "<rootDir>/config/polyfills.js",
-      "raf/polyfill"
+      "raf/polyfill",
+      "jest-localstorage-mock"
     ],
     "testMatch": [
       "<rootDir>/src/**/__tests__/**/*.js?(x)",

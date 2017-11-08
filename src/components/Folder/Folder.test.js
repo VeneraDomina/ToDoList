@@ -34,9 +34,9 @@ describe('Folder component:', () => {
     test('Componenet Folder should be a list element', () => {
         expect(result.type()).toBe('li');
     });
-    /*test('Componenet ContentEditable should have class \'contentValue\'', () => {
-        expect(result.find('ContentEditable').hasClass('Styles.contentValue')).toBe(true);
-    });*/
+    test('Componenet ContentEditable should have class \'contentValue\'', () => {
+        expect(result.find('ContentEditable').hasClass('contentValue'));
+    });
     test('FolderID should be equal _id', () => {
         result.find('li').simulate('click');
         expect(result.props.folderID).toEqual(result.props._id);
@@ -48,6 +48,6 @@ describe('Folder component:', () => {
             value: '2222'
         }));
         expect(shouldComponentUpdateSpy.calledOnce).toBe(true);
-        shouldComponentUpdateSpy.reset();
+        shouldComponentUpdateSpy.restore();
     });
 });

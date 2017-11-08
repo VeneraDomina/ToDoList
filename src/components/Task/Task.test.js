@@ -35,12 +35,18 @@ describe('Task component:', () => {
     test('Should have 1 \'span\' element', () => {
         expect(result.find('span')).toHaveLength(1);
     });
+    test('Should have \'section\' with class task', () => {
+        expect(result.find('section').hasClass('task'));
+    });
     test('Should have initial state: false', () => {
         expect(result.state()).toEqual(state);
     });
     test('Should toggle state', () => {
         result.find('div').simulate('click');
         expect(result.state()).toEqual(mutatedState);
+    });
+    test('Componenet ContentEditable should have class \'taskValue\'', () => {
+        expect(result.find('ContentEditable').hasClass('taskValue'));
     });
 });
 

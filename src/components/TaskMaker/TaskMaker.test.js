@@ -26,6 +26,12 @@ describe('TaskMaker component: ', () => {
     test('Should have 2 \'input\' element', () => {
         expect(result.find('input')).toHaveLength(2);
     });
+    test('Should have \'section\' with class task', () => {
+        expect(result.find('section').hasClass('task'));
+    });
+    test('Should have \'form\' with class form', () => {
+        expect(result.find('form').hasClass('form'));
+    });
     test('Should have initial state', () => {
         expect(result.state()).toEqual(state);
     });

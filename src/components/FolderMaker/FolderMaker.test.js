@@ -26,6 +26,9 @@ describe('FolderMaker component: ', () => {
     test('Should have 2 \'input\' element', () => {
         expect(result.find('input')).toHaveLength(2);
     });
+    test('Should have \'section\' with class folder', () => {
+        expect(result.find('section').hasClass('folder'));
+    });
     test('Should have initial state', () => {
         expect(result.state()).toEqual(state);
     });
