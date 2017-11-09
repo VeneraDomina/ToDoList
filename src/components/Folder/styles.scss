@@ -2,17 +2,15 @@
 
 .folder {
   position: relative;
-  width: 95%;
+  width: 100%;
   font-family: 'Crimson Text', serif;
   font-size: 14px;
-  padding-left: 5px;
-  border: 1px solid $paletteColor3;
 
   .contentValue {
-    margin: 0;
-    padding: 2px 0;
+    margin-left: 5px;
+    padding: 5px 0;
     outline: none;
-    background-color: $paletteColor3;
+    background-color: $paletteColor8;
     width: 90%;
     font-family: 'Crimson Text', serif;
     font-weight: 500;
@@ -23,10 +21,8 @@
   span {
     position: absolute;
     right: 5px;
-    border: 0;
-    outline: 0;
-    //display: none;
-    background-color: $paletteColor3;
+    top: 5px;
+    background-color: $paletteColor8;
     font-family: 'Crimson Text', serif;
     font-size: 12px;
     cursor: pointer;
@@ -35,34 +31,28 @@
 
 .folder:hover {
   background-color: $paletteColor4;
-  border: 1px solid $paletteColor4;
-  border-radius: 5px;
 
   .contentValue {
     background-color: $paletteColor4;
   }
   span {
     background-color: $paletteColor4;
-    //display: block;
   }
 }
 
 .folderSelected {
   position: relative;
-  width: 95%;
-  padding-left: 5px;
+  width: 100%;
   font-family: 'Crimson Text', serif;
   font-size: 14px;
-  border: 1px solid $paletteColor4;
-  border-radius: 5px;
-  background-color: $paletteColor4;
+  background-color: $paletteColor7;
 
   .contentValue {
-    margin: 0;
-    padding: 2px 0;
-    outline: none;
-    background-color: $paletteColor4;
+    margin-left: 5px;
+    padding: 5px 0;
+    background-color: $paletteColor7;
     width: 90%;
+    outline: 0;
     font-family: 'Crimson Text', serif;
     font-weight: 500;
     cursor: pointer;
@@ -72,10 +62,8 @@
   span {
     position: absolute;
     right: 5px;
-    border: 0;
-    outline: 0;
-    //display: none;
-    background-color: $paletteColor4;
+    top: 5px;
+    background-color: $paletteColor7;
     font-family: 'Crimson Text', serif;
     font-size: 12px;
     cursor: pointer;

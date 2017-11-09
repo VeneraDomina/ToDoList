@@ -3,8 +3,10 @@
 .task {
   display: flex;
   position: relative;
-  width: 100%;
+  width: 90%;
   height: 30px;
+  border: 1px solid #ccc;
+  background-color: $paletteColor2;
   font-family: 'Crimson Text', serif;
   font-size: 14px;
   align-items: center;
@@ -15,7 +17,6 @@
   input[type='text'] {
     outline: none;
     border: 0;
-    border-bottom: 1px solid $paletteColor1;
     margin-left: 47px;
     width: calc(100% - 87px);
     font-family: 'Crimson Text', serif;
@@ -26,21 +27,19 @@
   input[type='submit']{
     position: absolute;
     margin: 0;
-    right: 10px;
+    right: 5px;
     width: 30px;
     height: 20px;
     border: 0;
     outline: 0;
     background-color: #FFFFFF;
     font-style: italic;
-    color: $paletteColor4;
     font-family: 'Crimson Text', serif;
     font-size: 12px;
-    letter-spacing: 1px;
     cursor: pointer;
 
     &:hover {
-      color: $paletteColor1;
+      font-weight: bold;
     }
   }
 }

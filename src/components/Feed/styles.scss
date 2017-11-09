@@ -2,27 +2,10 @@
   margin: 0 auto;
   display: flex;
   flex-direction: row;
-  width: 40vw;
+  width: 100vw;
   min-width: 480px;
   height: 100vh;
   min-height: 596px;
   justify-content: space-between;
 }
 
-.folderEnter {
-    opacity: 0;
-}
-
-.folderEnterActive {
-    transition: opacity 1000ms linear;
-    opacity: 1;
-}
-
-.folderExit {
-  opacity: 1;
-}
-
-.folderExitactive {
-  transition: opacity 1000ms linear;
-  opacity: 0;
-}

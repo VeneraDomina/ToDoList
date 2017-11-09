@@ -22,7 +22,17 @@ export default class TaskList extends Component {
         this.editTask =:: this._editTask;
     }
     shouldComponentUpdate (nextProps) {
-        return this.props.tasks.length !== nextProps.tasks.length;
+        let isEqual = true;
+
+        if (this.props.tasks.length === nextProps.tasks.length) {
+            for (let i = 0; i < this.props.tasks.length; i++) {
+                isEqual = this.props.tasks[i].task === nextProps.tasks[i].task;
+            }
+        } else {
+            isEqual = true;
+        }
+
+        return isEqual;
     }
     _createTask (newTask) {
         this.props.createTask(newTask);
@@ -36,7 +46,7 @@ export default class TaskList extends Component {
     _taskAppear (task) {
         fromTo(
             task,
-            1,
+            0.7,
             { y: -500 },
             { y: 0 }
         );
@@ -44,7 +54,7 @@ export default class TaskList extends Component {
     _appearTaskMaker (taskMaker) {
         fromTo(
             taskMaker,
-            1,
+            0.7,
             { y: -500 },
             { y: 0 }
         );
@@ -59,7 +69,7 @@ export default class TaskList extends Component {
                     appear
                     in
                     key = { _id }
-                    timeout = { 200 }
+                    timeout = { 700 }
                     onEnter = { this.taskAppear }>
                     <Task
                         _id = { _id }
@@ -77,7 +87,7 @@ export default class TaskList extends Component {
                 <Transition
                     appear
                     in
-                    timeout = { 200 }
+                    timeout = { 700 }
                     onEnter = { this.appearTaskMaker }>
                     <TaskMaker createTask = { this.createTask } />
                 </Transition>

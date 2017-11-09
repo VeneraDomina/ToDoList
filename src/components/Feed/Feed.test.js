@@ -8,7 +8,6 @@ import { spy } from 'sinon';
 Enzyme.configure({ adapter: new Adapter() });
 
 const result = shallow(<Feed />);
-const resultMount = mount(<Feed />);
 
 describe('Feed component:', () => {
     test('Should have 1 \'section\' element with class feed', () => {
@@ -21,8 +20,8 @@ describe('Feed component:', () => {
         expect(result.find('TaskList')).toHaveLength(1);
     });
     test('Feed componentDidMount should be called once', () => {
-        const componentDidMountSpy = spy(Feed.prototype, 'componentDidMount');
-
-        expect(componentDidMountSpy.calledOnce).toBe(true);
+        spy(Feed.prototype, 'componentDidMount');
+        mount(<Feed />);
+        expect(Feed.prototype.componentDidMount.calledOnce).toBe(true);
     });
 });

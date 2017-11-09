@@ -4,17 +4,19 @@
   display: flex;
   position: relative;
   min-width: 270px;
-  width: 23vw;
+  width: 90%;
   height: 30px;
+  background-color: $paletteColor2;
+  border: 1px solid #ccc;
   font-family: 'Crimson Text', serif;
   font-size: 14px;
   align-items: center;
+  margin: 2px 0;
 
   .taskValue {
     outline: none;
     margin-left: 47px;
     border: 0;
-    border-bottom: 1px solid $paletteColor1;
     width: calc(100% - 57px);
     font-family: 'Crimson Text', serif;
     color: $paletteColor1;
@@ -26,7 +28,6 @@
     outline: none;
     margin-left: 47px;
     border: 0;
-    border-bottom: 1px solid $paletteColor1;
     width: calc(100% - 57px);
     font-family: 'Crimson Text', serif;
     color: $paletteColor1;
@@ -38,19 +39,12 @@
   span {
     position: absolute;
     right: 10px;
-    width: 30px;
-    height: 20px;
-    border: 0;
-    outline: 0;
-    background-color: #FFFFFF;
     font-style: italic;
-    color: $paletteColor4;
     font-size: 12px;
-    letter-spacing: 1px;
     cursor: pointer;
 
     &:hover {
-      color: #000;
+      font-weight: bold;
     }
   }
 
@@ -59,8 +53,7 @@
     left: 20px;
     width: 13px;
     height: 13px;
-    background-color: $paletteColor3;
-    border-radius: 50%;
+    border: 1px solid $paletteColor7;
     cursor: pointer;
   }
 
@@ -69,11 +62,10 @@
     left: 20px;
     width: 13px;
     height: 13px;
-    background-color: $paletteColor3;
+    border: 1px solid $paletteColor7;
+    cursor: pointer;
     background-image: url('../../theme/assets/select.png');
     background-repeat: no-repeat;
     background-position: 2px 3px;
-    border-radius: 50%;
-    cursor: pointer;
   }
 }
