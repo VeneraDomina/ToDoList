@@ -43,6 +43,7 @@ export default class Task extends Component {
     render () {
         const { task } = this.props;
         const { isSelected } = this.state;
+        const taskStyle = isSelected ? Styles.taskValueDone : Styles.taskValue;
 
         return (
             <section className = { Styles.task }>
@@ -51,7 +52,7 @@ export default class Task extends Component {
                     onClick = { this.toggleClassSelect }
                 />
                 <ContentEditable
-                    className = { isSelected ? Styles.taskValueDone : Styles.taskValue }
+                    className = { taskStyle }
                     disabled = { false }
                     html = { task }
                     onChange = { this.handlerChangeValue }

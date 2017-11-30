@@ -189,7 +189,7 @@ export default class Feed extends Component {
 
         ));
 
-        folders.filter((folder) => {
+        folders.forEach((folder) => {
             if (folder._id === folderID) {
                 taskArray = folder.taskList;
             }

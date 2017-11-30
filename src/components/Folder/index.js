@@ -35,10 +35,10 @@ export default class Folder extends Component {
 
     render () {
         const { folder, folderID, _id } = this.props;
+        const folderStyle = folderID === _id ? Styles.folderSelected : Styles.folder;
 
         return (
-            <li className = { folderID === _id ? Styles.folderSelected : Styles.folder } onClick = { this.selectedFolder }>
-
+            <li className = { folderStyle }  onClick = { this.selectedFolder }>
                 <ContentEditable
                     className = { Styles.contentValue }
                     disabled = { false }

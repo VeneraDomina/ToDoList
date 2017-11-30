@@ -21,7 +21,7 @@ export default class TaskList extends Component {
         this.appearTaskMaker =:: this._appearTaskMaker;
         this.editTask =:: this._editTask;
     }
-    shouldComponentUpdate (nextProps) {
+/*    shouldComponentUpdate (nextProps) {
         let isEqual = true;
 
         if (this.props.tasks.length === nextProps.tasks.length) {
@@ -33,7 +33,7 @@ export default class TaskList extends Component {
         }
 
         return isEqual;
-    }
+    }*/
     _createTask (newTask) {
         this.props.createTask(newTask);
     }
@@ -61,6 +61,7 @@ export default class TaskList extends Component {
     }
 
     render () {
+        console.log('***');
         const { tasks } = this.props;
         const header = 'Let\'s do this!';
         const taskList = tasks.map(
