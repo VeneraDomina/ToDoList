@@ -5,10 +5,12 @@ import ContentEditable from 'react-contenteditable';
 
 export default class Task extends Component {
     static propTypes = {
-        _id:        PropTypes.string.isRequired,
-        deleteTask: PropTypes.func.isRequired,
-        editTask:   PropTypes.func.isRequired,
-        task:       PropTypes.string.isRequired
+        _id:               PropTypes.string.isRequired,
+        deleteTask:        PropTypes.func.isRequired,
+        editTask:          PropTypes.func.isRequired,
+        task:              PropTypes.string.isRequired,
+        taskState:         PropTypes.bool.isRequired,
+        toggleClassSelect: PropTypes.func.isRequired
     };
 
     constructor () {
@@ -17,9 +19,9 @@ export default class Task extends Component {
         this.toggleClassSelect =:: this._toggleClassSelect;
         this.handlerChangeValue =:: this._handlerChangeValue;
     }
-    state = {
+/*    state = {
         isSelected: false
-    };
+    };*/
     shouldComponentUpdate (nextProps) {
         return !(this.state === nextProps.state && this.props.task === nextProps.task);
     }
@@ -27,11 +29,9 @@ export default class Task extends Component {
         this.props.deleteTask(this.props._id);
     }
     _toggleClassSelect () {
-        const { isSelected } = this.state;
+        const { taskState } = this.props;
 
-        this.setState(() => ({
-            isSelected: !isSelected
-        }));
+        this.props.toggleClassSelect(this.props._id, !taskState);
     }
 
     _handlerChangeValue (event) {
@@ -41,14 +41,14 @@ export default class Task extends Component {
     }
 
     render () {
-        const { task } = this.props;
-        const { isSelected } = this.state;
-        const taskStyle = isSelected ? Styles.taskValueDone : Styles.taskValue;
+        const { task, taskState } = this.props;
+        const taskStyle = taskState ? Styles.taskValueDone : Styles.taskValue;
+        const divStyle = taskState ? Styles.selected : Styles.select;
 
         return (
             <section className = { Styles.task }>
                 <div
-                    className = { isSelected ? Styles.selected : Styles.select }
+                    className = { divStyle }
                     onClick = { this.toggleClassSelect }
                 />
                 <ContentEditable

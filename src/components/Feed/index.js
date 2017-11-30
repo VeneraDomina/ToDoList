@@ -22,6 +22,7 @@ export default class Feed extends Component {
         this.taskListAppear =:: this._taskListAppear;
         this.editTask =:: this._editTask;
         this.editFolder =:: this._editFolder;
+        this.toggleClassSelect =:: this._toggleClassSelect;
     }
     state = {
         folders:  [],
@@ -151,6 +152,29 @@ export default class Feed extends Component {
         }));
         localStorage.setItem('folders', JSON.stringify(folders));
     }
+    _toggleClassSelect (_id, taskState) {
+        const { folders, folderID } = this.state;
+        const folderToChange = folders.filter((folder) => folder._id === folderID);
+        const editingTaskList = folderToChange[0].taskList.map((task) => {
+            if (task._id === _id) {
+                task.taskState = taskState;
+            }
+
+            return task;
+        });
+        const foldersEditTask = folders.map((folder) => {
+            if (folder._id === folderID) {
+                folder.taskList = editingTaskList;
+            }
+
+            return folder;
+        });
+
+        this.setState(() => ({
+            folders: foldersEditTask
+        }));
+        localStorage.setItem('folders', JSON.stringify(folders));
+    }
     _selectedFolder (_id) {
         this.setState(() => ({
             folderID: _id
@@ -220,6 +244,7 @@ export default class Feed extends Component {
                         deleteTask = { this.deleteTask }
                         editTask = { this.editTask }
                         tasks = { taskArray }
+                        toggleClassSelect = { this.toggleClassSelect }
                     />
                 </Transition>
             </section>

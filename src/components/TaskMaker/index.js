@@ -34,8 +34,9 @@ export default class TaskMaker extends Component {
             return;
         }
         this.props.createTask({
-            _id:  getUniqueID(10),
-            task: taskValue
+            _id:       getUniqueID(10),
+            task:      taskValue,
+            taskState: false
         });
 
         this.setState(() => ({

@@ -8,10 +8,11 @@ import { fromTo } from 'gsap';
 
 export default class TaskList extends Component {
     static propTypes = {
-        createTask: PropTypes.func.isRequired,
-        deleteTask: PropTypes.func.isRequired,
-        editTask:   PropTypes.func.isRequired,
-        tasks:      PropTypes.array.isRequired
+        createTask:        PropTypes.func.isRequired,
+        deleteTask:        PropTypes.func.isRequired,
+        editTask:          PropTypes.func.isRequired,
+        tasks:             PropTypes.array.isRequired,
+        toggleClassSelect: PropTypes.func.isRequired
     };
     constructor () {
         super();
@@ -20,6 +21,7 @@ export default class TaskList extends Component {
         this.taskAppear =:: this._taskAppear;
         this.appearTaskMaker =:: this._appearTaskMaker;
         this.editTask =:: this._editTask;
+        this.toggleClassSelect =:: this._toggleClassSelect;
     }
 /*    shouldComponentUpdate (nextProps) {
         let isEqual = true;
@@ -43,6 +45,9 @@ export default class TaskList extends Component {
     _editTask (_id, editedTask) {
         this.props.editTask(_id, editedTask);
     }
+    _toggleClassSelect (_id, taskState) {
+        this.props.toggleClassSelect(_id, taskState);
+    }
     _taskAppear (task) {
         fromTo(
             task,
@@ -65,7 +70,7 @@ export default class TaskList extends Component {
         const { tasks } = this.props;
         const header = 'Let\'s do this!';
         const taskList = tasks.map(
-            ({ _id, task }) => (
+            ({ _id, task, taskState }) => (
                 <Transition
                     appear
                     in
@@ -77,6 +82,8 @@ export default class TaskList extends Component {
                         deleteTask = { this.deleteTask }
                         editTask = { this.editTask }
                         task = { task }
+                        taskState = { taskState }
+                        toggleClassSelect = { this.toggleClassSelect }
                     />
                 </Transition>
             ));
